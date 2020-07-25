@@ -10,10 +10,8 @@
 	
 	<section class="banner" id="sec">
 		<header>
-		<a href="#" class="logo">Logo</a>
-			<div id="toggle" onClick="toggle()">
-			
-			</div>
+		<a href="#" class="logo">A-M</a>
+			<div id="toggle" onClick="toggle()"></div>
 		</header>
 		
 		<div class="content">
@@ -22,12 +20,11 @@
 			<a href="#">Know More</a>
 		</div>
 		
-		<ul class="sci">
-		   <li><a href="#"><img src="images/facebook.png"></a></li>
-			<li><a href="#"><img src="images/twitter.png"></a></li>
-			<li><a href="#"><img src="images/linkedin.png"></a></li>
+		<ul class="sci" >
+		   <li><a href="https://www.facebook.com/amna.munir.98837" target="_blank"><img alt="" src="images/facebook.png"></a></li>
+			<li><a href="#"><img alt="" src="images/twitter.png"></a></li>
+			<li><a href="https://www.linkedin.com/in/amna-muniir-7b480619b/" target="_blank"><img alt="" src="images/linkedin.png"></a></li>
 		</ul>
-		
 		
 	</section>
 	
@@ -38,31 +35,19 @@
 		<li><a href="#">Service</a></li>
 		<li><a href="#">Portfolio</a></li>
 		<li><a href="#">Contact</a></li>
-		
-		
 		</ul>
-	
 	</div>
-	
-	
-	
-	
-	
-</body>
-	
 	<script type="text/javascript">
 		function toggle(){
-			var sec=document.getElementById('sec')
-			sec.classList.toggle('active')
+			var sec=document.getElementById('sec');
+			var nav=document.getElementById('navigation');
+			sec.classList.toggle('active');
+			nav.classList.toggle('active');
+			
 			
 			
 		}
-	
-	
-	
-	
-	
-	
-	
+
 	</script>
+</body>
 </html>
