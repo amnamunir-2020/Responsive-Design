@@ -11,7 +11,7 @@
 
 
 /*HEADER CSS----------------------------------------------------*/
-.header{
+header{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -67,13 +67,18 @@ header #toggle:after
 
 
 /*BANNER CSS---------------------------------------------------*/
-.banner .active header #toggle:before{
+.banner.active header #toggle:before{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+
+
+.banner.active header #toggle:after{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%) rotate(-45deg);
 }
-
-
 
 
 
@@ -83,9 +88,172 @@ header #toggle:after
 	width: 100%;
 	min-height: 100vh;
 	padding: 100px;
-	background: url("images/bg.jpg");
+	background: url("https://images.pexels.com/photos/1161268/pexels-photo-1161268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 	background-size: cover;
 	display: flex;
 	align-items: center;
+	transition: 0.5s;
+	z-index: 2;
 }
 
+
+.banner.active{
+	transform: translateX(-400px);
+}
+/*NAVIGATION CSS-----------------------------*/
+#navigation{
+	position: fixed;
+	top: 0;
+	right: -200;
+	height: 100vh;
+	width: 400px;
+	background:lightseagreen;
+	z-index: 1;
+	place-items:center;
+	display: grid;
+	transition: 0.5s;
+}
+
+#navigation.active{
+	right: 0;
+}
+
+#navigation ul{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+#navigation ul li{
+	list-style: none;
+	
+}
+#navigation ul li a{
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+/*CONTENT CSS---------------------------*/
+.content{
+	max-width: 600px;
+	
+}
+.content h2{
+	color: white;
+	font-size: 2.5em;
+	
+}
+
+.content h2 span{
+	color: lightseagreen;
+	font-size: 1.2em;
+	
+}
+
+.content p{
+	font-size: 1.2em;
+	color: white;
+	font-weight: 300;
+}
+
+.content a{
+	position: relative;
+	display: inline-block;
+	margin-top: 20px;
+	background: #fff;
+	color: rebeccapurple;
+	text-decoration: none;
+	padding: 10px 30px;
+	font-size: 1.2em;
+	font-weight: 500;
+}
+/*ICON CSS--------------------------------*/
+.sci{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	right: 100px;
+	
+}
+.sci li{
+	list-style: none;
+
+}
+
+.sci li a{
+	position: relative;
+	place-items:center;
+	display: grid;
+	text-decoration: none;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #fff;
+	margin: 10px 0 0;
+	
+}
+
+.sci li a:hover{
+	background: #fff;
+	
+	
+}
+
+.sci li a img{
+	filter: invert(1);
+	max-width: 20px;
+	mix-blend-mode: difference;
+	
+}
+
+/*MEDIA QUERY FOR RESPONSIVE!------------------------*/
+@media(max-width:767px)
+{
+	header
+	{
+	padding:  20px 50px;
+	}
+	.banner{
+		padding:  100px 50px 150px;
+	}
+	.banner h2{
+		font-size: 1.8em;
+	}
+	.banner.content p,.banner.content a
+	{
+		font-size: 1em;
+	}
+	.banner.active
+	{
+	transform: translateX(-250px);
+}
+	#navigation
+	{
+		width: 250px;
+	}
+	
+	#navigation ul li a
+	{
+	font-size: 1.5em;
+		margin: 5px 0;
+	}
+	
+	.sci
+	{
+		position: absolute;
+		bottom: 50px;
+		right: initial;
+		flex-direction: row;
+		
+	}
+	.sci li a{
+		
+		margin: initial;
+		margin-right: 10px;
+		
+		
+		
+	}
+}
